@@ -75,7 +75,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await query.message.delete()
                 try: await query.message.reply_to_message.delete()
                 except: pass
-            else: await query.answer("Buddy Don't Touch Others Property 😁", show_alert=True)
+            else: await query.answer("That's Not For You Buddy", show_alert=True)
             
     elif "groupcb" in query.data:
         group_id = query.data.split(":")[1]
