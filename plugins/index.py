@@ -28,16 +28,16 @@ async def media(bot, message):
 async def index_files(bot, query):
     if query.data.startswith('index_cancel'):
         temp.CANCEL = True
-        return await query.answer("Cᴀɴᴄᴇʟʟɪɴɢ Iɴᴅᴇxɪɴɢ", show_alert=True)
+        return await query.answer("𝘖𝘱𝘦𝘳𝘢𝘵𝘪𝘰𝘯 𝘐𝘯𝘵𝘶𝘳𝘳𝘶𝘱𝘵𝘦𝘥", show_alert=True)
         
     perfx, chat, lst_msg_id = query.data.split("#")
     if lock.locked():
-        return await query.answer('Wᴀɪᴛ Uɴᴛɪʟ Pʀᴇᴠɪᴏᴜs Pʀᴏᴄᴇss Cᴏᴍᴘʟᴇᴛᴇ', show_alert=True)
+        return await query.answer('𝘔𝘢𝘴𝘵𝘦𝘳 𝘐 𝘰𝘯𝘭𝘺 𝘩𝘢𝘷𝘦 𝘵𝘸𝘰 𝘩𝘢𝘯𝘥𝘴, 𝘞𝘢𝘪𝘵', show_alert=True)
     msg = query.message
     button = InlineKeyboardMarkup([[
-        InlineKeyboardButton('🚫 ᴄᴀɴᴄᴇʟʟ', "index_cancel")
+        InlineKeyboardButton('𝘊𝘢𝘯𝘤𝘦𝘭 𝘖𝘱𝘦𝘳𝘢𝘵𝘪𝘰𝘯', "index_cancel")
     ]])
-    await msg.edit("ɪɴᴅᴇxɪɴɢ ɪs sᴛᴀʀᴛᴇᴅ ✨", reply_markup=button)                        
+    await msg.edit("𝘖𝘱𝘦𝘳𝘢𝘵𝘪𝘰𝘯 𝘊𝘰𝘮𝘮𝘦𝘯𝘤𝘦𝘥", reply_markup=button)                        
     try: chat = int(chat)
     except: chat = chat
     await index_files_to_db(int(lst_msg_id), chat, msg, bot)
@@ -64,9 +64,9 @@ async def send_for_index(bot, message):
     except: return await message.reply('Make Sure That Iam An Admin In The Channel, if channel is private')
     if k.empty: return await message.reply('This may be group and iam not a admin of the group.')
     buttons = InlineKeyboardMarkup([[
-        InlineKeyboardButton('✨ ʏᴇꜱ', callback_data=f'index#{chat_id}#{last_msg_id}')
+        InlineKeyboardButton('𝘠𝘦𝘴', callback_data=f'index#{chat_id}#{last_msg_id}')
         ],[
-        InlineKeyboardButton('🚫 ᴄʟᴏꜱᴇ', callback_data='close_data')
+        InlineKeyboardButton('𝘊𝘭𝘰𝘴𝘦', callback_data='close_data')
     ]])               
     await message.reply(f'Do You Want To Index This Channel/ Group ?\n\nChat ID/ Username: <code>{chat_id}</code>\nLast Message ID: <code>{last_msg_id}</code>', reply_markup=buttons)
     
