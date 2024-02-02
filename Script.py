@@ -1,191 +1,191 @@
 class script(object):  
-    START_TXT = """<b>✨ Hᴇʟʟᴏ {user}.
+    START_TXT = """🔮<i>>{user}.</i>🔮
 
-Mʏ Nᴀᴍᴇ Is {bot}.
+<i>I'm {bot}.</i>
 
-I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇ Fᴏʀ Yᴏᴜ Jᴜsᴛ Aᴅᴅ Mᴇ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ Oʀ Jᴏɪɴ Oᴜʀ Gʀᴏᴜᴘ</b>"""
+<i>Listen up, weakling. I've got a collection of movies that'll send shivers down your spine. Join our group, and maybe, just maybe, you'll survive the cinematic chaos we're about to unleash. Consider yourself warned.</i>"""
     
-    HELP_TXT = "Hᴇʏ {}\nHᴇʀᴇ Mꜱ Mʏ Hᴇʟᴩ"
+    HELP_TXT = "<i> {} Get Help Below, Suit Yourself </i>"
 
-    ABOUT_TXT = """<b>✯ Mʏ ɴᴀᴍᴇ: {}
-✯ Dᴇᴠᴇʟᴏᴩᴇʀ: <a herf=https://t.me/Mr_MKN>ᴍʀ.ᴍᴋɴ ᴛɢ</a>
-✯ Cᴏᴅᴇᴅ Oɴ: ᴩʏᴛʜᴏɴ/ᴩʏʀᴏɢʀᴀᴍ
-✯ Mʏ DᴀᴛᴀBᴀꜱᴇ: ᴍᴏɴɢᴏ-ᴅʙ
-✯ Mʏ Sᴇʀᴠᴇʀ: ᴀɴʏᴡʜᴇʀᴇ
-✯ Mʏ Vᴇʀꜱɪᴏɴ: ᴩʀᴏꜰᴇꜱꜱᴏʀ-ʙᴏᴛ ᴠ4.5.0</b>"""
+    ABOUT_TXT = """🔮 <b><i>MyNAME: {}</b></i>
+🔮 <b><i>DEVELOPER: <a herf=https://t.me/k_ASTRA1>ReDIRECT</a></b></i>
+🔮 <b><i>CODED ON: PyTHON / PyROGRAM</b></i>
+🔮 <b><i>MyDATABASE: MONGO_DB</b></i>
+🔮 <b><i>MySERVER: AnyWHERE</b></i>
+🔮 <b><i>VERSION: V1.0</b></i>"""
    
-    SOURCE_TXT = """<b>NOTE:</b>
-- ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ʜᴇʀᴇ ◉› :<a href=https://github.com/MrMKN/PROFESSOR-BOT>𝐏𝐑𝐎𝐅𝐄𝐒𝐒𝐎𝐑-𝐁𝐎𝐓</a>
+    SOURCE_TXT = """<b><i>Source Code:</b></i>
+<b><i>Limited ownership of components. Not available for public release.</b></i>
 
-<b>ᴅᴇᴠ: <a herf=https://t.me/Mr_MKN>ᴍʀ.ᴍᴋɴ ᴛɢ</a></b>"""
+<b><i>For Enquires: @k_ASTRA1</b></i>"""
 
-    FILE_TXT = """<b>➤ Hᴇʟᴘ Fᴏʀ Fɪʟᴇ Sᴛᴏʀᴇ</b>
+    FILE_TXT = """<b><i>File Store</b></i>
 
-<i>Bʏ Usɪɴɢ Tʜɪs Mᴏᴅᴜʟᴇ Yᴏᴜ Cᴀɴ Sᴛᴏʀᴇ Fɪʟᴇs Iɴ Mʏ Dᴀᴛᴀʙᴀsᴇ Aɴᴅ I Wɪʟʟ Gɪᴠᴇ Yᴏᴜ A Pᴇʀᴍᴀɴᴇɴᴛ Lɪɴᴋ  Tᴏ Aᴄᴄᴇss Tʜᴇ Sᴀᴠᴇᴅ Fɪʟᴇs. Iғ Yᴏᴜ Wᴀɴᴛ Tᴏ Aᴅᴅ Fɪʟᴇs Fʀᴏᴍ A Pᴜʙʟɪᴄ Cʜᴀɴɴᴇʟ Sᴇɴᴅ Tʜᴇ Fɪʟᴇ Lɪɴᴋ Oɴʟʏ  Oʀ Yᴏᴜ Wᴀɴᴛ Tᴏ Aᴅᴅ Fɪʟᴇs Fʀᴏᴍ A  Pʀɪᴠᴀᴛᴇ Cʜᴀɴɴᴇʟ Yᴏᴜʀ Mᴜsᴛ Mᴀᴋᴇ Mᴇ Aᴅᴍɪɴ Oɴ Tʜᴇ Cʜᴀɴɴᴇʟ Tᴏ Aᴄᴄᴇss Fɪʟᴇs</i>
+<b><i>Utilize this module to store files in my database, and receive a permanent link for access. For files from public channels, send the file link only. For private channels, grant admin access to enable file addition.</b></i>
 
-<b>⪼ Cᴏᴍᴍᴀɴᴅ & Usᴀɢᴇ</b>
-➪ /link › Rᴇᴘʟʏ Tᴏ Aɴʏ Mᴇᴅɪᴀ Tᴏ Gᴇᴛ Tʜᴇ Lɪɴᴋ 
-➪ /batch › Tᴏ Cʀᴇᴀᴛᴇ Lɪɴᴋ Fᴏʀ Mᴜʟᴛɪᴘʟᴇ Mᴇᴅɪᴀ
+<b><i>Command & Usage</b></i>
+<code>/link</code> <b><i>Reply To Any Media To Get The Link </b></i>
+<code>/batch</code> <b><i>To Create Link For Multiple Media</b></i>
 
-<b>⪼ EG:</b>
-</code>/batch https://t.me/mkn_bots_updates/1 https://t.me/mkn_bots_updates/10</code>"""
+<b><i>EG:</b></i>
+</code>/batch https://t.me/k_ASTRA1/1 https://t.me/k_ASTRA1/10</code>"""
   
-    FILTER_TXT = "Sᴇʟᴇᴄᴛ Wʜɪᴄʜ Oɴᴇ Yᴏᴜ Wᴀɴᴛ...✨"
+    FILTER_TXT = "<b><i>Select Which One You Want...</b></i>"
     
-    GLOBALFILTER_TXT = """<b>Hᴇʟᴘ Fᴏʀ Gʟᴏʙᴀʟ Fɪʟᴛᴇʀs</b>
+    GLOBALFILTER_TXT = """<b><i>Help For Global Filters</b></i>
 
-<i>Fɪʟᴛᴇʀ Is Tʜᴇ Fᴇᴀᴛᴜʀᴇ Wᴇʀᴇ Usᴇʀs Cᴀɴ Sᴇᴛ Aᴜᴛᴏᴍᴀᴛᴇᴅ Rᴇᴘʟɪᴇs Fᴏʀ A Pᴀʀᴛɪᴄᴜʟᴀʀ Kᴇʏᴡᴏʀᴅ Aɴᴅ Bᴏᴛ  Wɪʟʟ Rᴇsᴘᴏɴᴅ Wʜᴇɴᴇᴠᴇʀ A Kᴇʏᴡᴏʀᴅ Is Fᴏᴜɴᴅ Tʜᴇ Mᴇssᴀɢᴇ</i>
+<b><i>Filter Is The Feature Were Users Can Set Automated Replies For A Particular Keyword And Bot  Will Respond Whenever A Keyword Is Found The Message</b></i>
 
-<b>Nᴏᴛᴇ:</b>
-Tʜɪs Mᴏᴅᴜʟᴇ Oɴʟʏ Wᴏʀᴋs Fᴏʀ Mʏ Aᴅᴍɪɴs
+<b><i>Note:</b></i>
+<b><i>This Module Only Works For My Admins</b></i>
 
-<b>Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:</b>
-• /gfilter - Tᴏ Aᴅᴅ Gʟᴏʙᴀʟ Fɪʟᴛᴇʀs
-• /gfilters - Tᴏ Vɪᴇᴡ Lɪsᴛ Oғ Aʟʟ Gʟᴏʙᴀʟ Fɪʟᴛᴇʀs
-• /delg - Tᴏ Dᴇʟᴇᴛᴇ A Sᴘᴇᴄɪғɪᴄ Gʟᴏʙᴀʟ Fɪʟᴛᴇʀ
-• /delallg - Tᴏ Dᴇʟᴇᴛᴇ Aʟʟ Gʟᴏʙᴀʟ Fɪʟᴛᴇʀꜱ
+<b><i>Commands And Usage:</b></i>
+🔮 <code>/gfilter</code> - <b><i>To Add Global Filters</b></i>
+🔮 <code>/gfilters</code> - <b><i>To View List Of All Global Filters</b></i>
+🔮 <code>/delg</code> - <b><i>To Delete A Specific Global Filter</b></i>
+🔮 <code>/delallg</code> - <b><i>To Delete All Global Filterꜱ</b></i>
 
-• /g_filter off Usᴇ Tʜɪs Cᴏᴍᴍᴏᴀɴᴅ + on/offғ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ Tᴏ Cᴏɴᴛʀᴏʟ Gʟᴏʙᴀʟ Fɪʟᴛᴇʀ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ"""
+🔮 <code>/g_filter</code> <b><i>off Use This Command + on/off In Your Group To Control Global Filter In Your Group</b></i>"""
 
-    MANUELFILTER_TXT = """<b>Hᴇʟᴘ Fᴏʀ Fɪʟᴛᴇʀs</b>
+    MANUELFILTER_TXT = """🔮<b><i>Help: Filters</b></i>🔮
 
-<i>Fɪʟᴛᴇʀ Is Tʜᴇ Fᴇᴀᴛᴜʀᴇ Wᴇʀᴇ Usᴇʀs Cᴀɴ Sᴇᴛ Aᴜᴛᴏᴍᴀᴛᴇᴅ Rᴇᴘʟɪᴇs Fᴏʀ A Pᴀʀᴛɪᴄᴜʟᴀʀ Kᴇʏᴡᴏʀᴅ Aɴᴅ Bᴏᴛ  Wɪʟʟ Rᴇsᴘᴏɴᴅ Wʜᴇɴᴇᴠᴇʀ A Kᴇʏᴡᴏʀᴅ Is Fᴏᴜɴᴅ Tʜᴇ Mᴇssᴀɢᴇ</i>
+<b><i>Filter Is The Feature Were Users Can Set Automated Replies For A Particular Keyword And Bot  Will Respond Whenever A Keyword Is Found The Message</b></i>
 
-<b>Nᴏᴛᴇ:</b>
-𝟷. Tʜɪs Bᴏᴛ Sʜᴏᴜʟᴅ Hᴀᴠᴇ Aᴅᴍɪɴ Pʀɪᴠɪʟʟᴀɢᴇ.
-𝟸. Oɴʟʏ Aᴅᴍɪɴs Cᴀɴ Aᴅᴅ Fɪʟᴛᴇʀs Iɴ A Cʜᴀᴛ.
-𝟹. Aʟᴇʀᴛ Bᴜᴛᴛᴏɴs Hᴀᴠᴇ A Lɪᴍɪᴛ Oғ 𝟼𝟺 Cʜᴀʀᴀᴄᴛᴇʀs.
+<b><i>Note:</b></i>
+<b><i>1. This Bot Should Have Admin Privillage.</b></i>
+<b><i>2. Only Admins Can Add Filters In A Chat.</b></i>
+<b><i>3. Alert Buttons Have A Limit Of 64 Characters.</b></i>
 
-<b>Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:</b>
-• /filter - Aᴅᴅ A Fɪʟᴛᴇʀ Iɴ Cʜᴀᴛ
-• /filters - Lɪsᴛ Aʟʟ Tʜᴇ Fɪʟᴛᴇʀs Oғ A Cʜᴀᴛ
-• /del - Dᴇʟᴇᴛᴇ A Sᴘᴇᴄɪғɪᴄ Fɪʟᴛᴇʀ Iɴ Cʜᴀᴛ
-• /delall - Dᴇʟᴇᴛᴇ Tʜᴇ Wʜᴏʟᴇ Fɪʟᴛᴇʀs Iɴ A Cʜᴀᴛ (Cʜᴀᴛ Oᴡɴᴇʀ Oɴʟʏ)
+<b>Commands And Usage:</b>
+🔮 <code>/filter</code> - <b><i>Add A Filter In Chat</b></i>
+🔮 <code>/filters</code> - <b><i>List All The Filters Of A Chat</b></i>
+🔮 <code>/del</code> - <b><i>Delete A Specific Filter In Chat</b></i>
+🔮 <code>/delall</code> - <b><i>Delete The Whole Filters In A Chat (Chat Owner Only)</b></i>
 
-• /g_filter off Usᴇ Tʜɪs Cᴏᴍᴍᴏᴀɴᴅ + on/offғ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ Tᴏ Cᴏɴᴛʀᴏʟ Gʟᴏʙᴀʟ Fɪʟᴛᴇʀ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ"""
+- <code>/g_filter</code> <b><i>Use This Command + on/off In Your Group To Control Global Filter In Your Group</b></i>"""
 
-    BUTTON_TXT = """<b>Hᴇʟᴘ Fᴏʀ Bᴜᴛᴛᴏɴs</b>
+    BUTTON_TXT = """🔮<b><i>Help: Buttons</b></i>🔮
 
-<i>Tʜɪs Bᴏᴛ Sᴜᴘᴘᴏʀᴛs Bᴏᴛʜ Uʀʟ Aɴᴅ Aʟᴇʀᴛ Iɴʟɪɴᴇ Bᴜᴛᴛᴏɴs.</i>
+<b><i>This Bot Supports Both Url And Alert Inline Buttons.</b></i>
 
-<b>Nᴏᴛᴇ:</b>
-𝟷. Tᴇʟᴇɢʀᴀᴍ Wɪʟʟ Nᴏᴛ Aʟʟᴏᴡs Yᴏᴜ Tᴏ Sᴇɴᴅ Bᴜᴛᴛᴏɴs Wɪᴛʜᴏᴜᴛ Aɴʏ Cᴏɴᴛᴇɴᴛ, Sᴏ Cᴏɴᴛᴇɴᴛ Is Mᴀɴᴅᴀᴛᴏʀʏ.
-𝟸. Tʜɪs Bᴏᴛ Sᴜᴘᴘᴏʀᴛs Bᴜᴛᴛᴏɴs Wɪᴛʜ Aɴʏ Tᴇʟᴇɢʀᴀᴍ Mᴇᴅɪᴀ Tʏᴘᴇ.
-𝟹. Bᴜᴛᴛᴏɴs Sʜᴏᴜʟᴅ Bᴇ Pʀᴏᴘᴇʀʟʏ Pᴀʀsᴇᴅ As Mᴀʀᴋᴅᴏᴡɴ Fᴏʀᴍᴀᴛ
+<b><i>Note:</b></i>
+<b><i>1. Telegram Will Not Allows You To Send Buttons Without Any Content, So Content Is Mandatory.</b></i>
+<b><i>2. This Bot Supports Buttons With Any Telegram Media Type.</b></i>
+<b><i>3. Buttons Should Be Properly Parsed As Markdown Format</b></i>
 
-<b>Uʀʟ Bᴜᴛᴛᴏɴs:</b>
-[Bᴜᴛᴛᴏɴ Tᴇxᴛ](buttonurl:xxxxxxxxxxxx)
+<b><i>URL Buttons:</b></i>
+<code>[Button Text](buttonurl:xxxxxxxxxxxx)</code>
 
-<b>Aʟᴇʀᴛ Bᴜᴛᴛᴏɴs:</b>
-[Bᴜᴛᴛᴏɴ Tᴇxᴛ](buttonalert:Tʜɪs Is Aɴ Aʟᴇʀᴛ Mᴇssᴀɢᴇ)"""
+<b><i>Alert Buttons:</b></i>
+<code>[Button Text] (Button Alert: This Is An Alert Message)</code>"""
 
-    AUTOFILTER_TXT = """<b>Hᴇʟᴘ Fᴏʀ AᴜᴛᴏFɪʟᴛᴇʀ</b>
+    AUTOFILTER_TXT = """🔮<b><i>Help For AutoFilter</b></i>🔮
 
-<Ai>Aᴜᴛᴏ Fɪʟᴛᴇʀ Is Tʜᴇ Fᴇᴀᴛᴜʀᴇ Tᴏ Fɪʟᴛᴇʀ & Sᴀᴠᴇ Tʜᴇ Fɪʟᴇs Aᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ Fʀᴏᴍ Cᴜᴀɴɴᴇʟ Tᴏ Gʀᴏᴜᴘ. Yᴏᴜ Cᴀɴ Usᴇ Tʜᴇ Fᴏʟʟᴏᴡɪɴɢ Cᴏᴍᴍᴀɴᴅ Tᴏ ᴏɴ/ᴏғғ Tʜᴇ AᴜᴛᴏFɪʟᴛᴇʀ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ</i>
+<b><i>Auto Filter Is The Feature To Filter & Save The Files Automatically From Cuannel To Group. You Can Use The Following Command To on/off The AutoFilter In Your Group</b></i>
 
-• /autofilter on - ᴀᴜᴛᴏғɪʟᴛᴇʀ ᴇɴᴀʙʟᴇ ɪɴ ʏᴏʀ ᴄʜᴀᴛ
-• /autofilter off - ᴀᴜᴛᴏғɪʟᴛᴇʀ ᴅɪsᴀʙʟᴇ ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ
+- <code>/autofilter on</code> - <b><i>autofilter enable in your chat</b></i>
+- <code>/autofilter off</code> - <b><i>autofilter disabled in your chat</b></i>
 
-<Ob>Oᴛʜᴇʀ Cᴏᴍᴍᴀɴᴅs:</b>
-• /set_template - Sᴇᴛ Iᴍᴅʙ Tᴇᴍᴘʟᴀᴛᴇ Fᴏʀ Yᴏᴜʀ Gʀᴏᴜᴘ 
-• /get_template - Gᴇᴛ Cᴜʀʀᴇɴᴛ Iᴍᴅʙ Tᴇᴍᴘʟᴀᴛᴇ Fᴏʀ Yᴏᴜʀ Gʀᴏᴜᴘ"""
+<b><i>Other Commands:</b></i>
+🔮 <code>/set_template</code> - <b><i>Set Imdb Template For Your Group</b></i> 
+🔮 <code>/get_template</code> - <b><i>Get Current Imdb Template For Your Group</b></i>"""
 
-    CONNECTION_TXT = """<b>Hᴇʟᴘ Fᴏʀ Cᴏɴɴᴇᴄᴛɪᴏɴs</b>
+    CONNECTION_TXT = """🔮<b><i>Help For Connections</b></i>🔮
 
-<i> Usᴇᴅ Tᴏ Cᴏɴɴᴇᴄᴛ Bᴏᴛ Tᴏ Pᴍ Fᴏʀ Mᴀɴᴀɢɪɴɢ Fɪʟᴛᴇʀs. Iᴛ Hᴇʟᴘs Tᴏ Aᴠᴏɪᴅ Sᴘᴀᴍᴍɪɴɢ Iɴ Gʀᴏᴜᴘs</i>
+<b><i>Used To Connect Bot To Pm For Managing Filters. It Helps To Avoid Spamming In Groups</b></i>
 
-<b>Nᴏᴛᴇ:</b>
-• Oɴʟʏ Aᴅᴍɪɴs Cᴀɴ Aᴅᴅ A Cᴏɴɴᴇᴄᴛɪᴏɴ.
-• Sᴇɴᴅ /connect Fᴏʀ Cᴏɴɴᴇᴄᴛɪɴɢ Mᴇ Tᴏ Uʀ Pᴍ
+<b><i>NOTE:</b></i>
+🔮 <b><i>Only Admins Can Add A Connection.</b></i>
+🔮 <b><i>Send <code>/connect</code> <b><i>For Connecting Me To Your Pm</b></i>
 
-<Cb>Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:</b>
-• /connect - Cᴏɴɴᴇᴄᴛ A Pᴀʀᴛɪᴄᴜʟᴀʀ Cʜᴀᴛ Tᴏ Yᴏᴜʀ Pᴍ
-• /disconnect - Dɪsᴄᴏɴɴᴇᴄᴛ Fʀᴏᴍ A Cʜᴀᴛ
-• /connections - Lɪsᴛ Aʟʟ Yᴏᴜʀ Cᴏɴɴᴇᴄᴛɪᴏɴs"""
+<b><i>Commands And Usage:</b>
+🔮 <code>/connect</code>  - Connect A Particular Chat To Your PM
+🔮 <code>/disconnect</code>  - Disconnect From A Chat
+🔮 <code>/connections</code>  - List All Your Connections"""
 
-    ADMIN_TXT = """<b>Hᴇʟᴩ Fᴏʀ Aᴅᴍɪɴꜱ</b>
+    ADMIN_TXT = """🔮<b><i>Help: Admins Only</b></i>🔮
     
-<i>Tʜɪs Mᴏᴅᴜʟᴇ Oɴʟʏ Wᴏʀᴋs Fᴏʀ Mʏ Aᴅᴍɪɴs</i>
+<b><i>NOTE: This Module Only Works For Admins</b></i>
 
-<b>Cᴏᴍᴍᴀɴᴅ & Uꜱᴀɢᴇ</b>
-• /logs - Tᴏ Gᴇᴛ Tʜᴇ Rᴇᴄᴇɴᴛ Eʀʀᴏʀꜱ
-• /delete - Tᴏ Dᴇʟᴇᴛᴇ A Sᴘᴇᴄɪꜰɪᴄ Fɪʟᴇ Fʀᴏᴍ DB
-• /deleteall - Tᴏ Dᴇʟᴇᴛᴇ Aʟʟ Fɪʟᴇs Fʀᴏᴍ DB
-• /users - Tᴏ Gᴇᴛ Lɪꜱᴛ Oꜰ Mʏ Uꜱᴇʀꜱ Aɴᴅ Iᴅꜱ
-• /chats - Tᴏ Gᴇᴛ Lɪꜱᴛ Oꜰ Mʏ Cʜᴀᴛꜱ Aɴᴅ Iᴅꜱ
-• /channel - Tᴏ Gᴇᴛ Lɪꜱᴛ Oꜰ Tᴏᴛᴀʟ Cᴏɴɴᴇᴄᴛᴇᴅ Cʜᴀɴɴᴇʟꜱ
-• /broadcast - Tᴏ Bʀᴏᴀᴅᴄᴀꜱᴛ A Mᴇꜱꜱᴀɢᴇ Tᴏ Aʟʟ Uꜱᴇʀꜱ
-• /group_broadcast - Tᴏ Bʀᴏᴀᴅᴄᴀsᴛ A Mᴇssᴀɢᴇ Tᴏ Aʟʟ Cᴏɴɴᴇᴄᴛᴇᴅ Gʀᴏᴜᴘs
-• /leave  - Wɪᴛʜ Cʜᴀᴛ Iᴅ Tᴏ Lᴇᴀᴠᴇ Fʀᴏᴍ A Cʜᴀᴛ
-• /disable  - Wɪᴛʜ Cʜᴀᴛ Iᴅ Tᴏ Dɪꜱᴀʙʟᴇ A Cʜᴀᴛ
-• /invite - Wɪᴛʜ Cʜᴀᴛ Iᴅ Tᴏ Gᴇᴛ Tʜᴇ Iɴᴠɪᴛᴇ Lɪɴᴋ Oғ Aɴʏ Cʜᴀᴛ Wʜᴇʀᴇ Tʜᴇ Bᴏᴛ Is Aᴅᴍɪɴ
-• /ban_user  - Wɪᴛʜ Iᴅ Tᴏ Bᴀɴ A Uꜱᴇʀ
-• /unban_user  - Wɪᴛʜ Iᴅ Tᴏ Uɴʙᴀɴ A Uꜱᴇʀ
-• /restart - Tᴏ Rᴇsᴛᴀʀᴛ Tʜᴇ Bᴏᴛ
-• /clear_junk - Cʟᴇᴀʀ Aʟʟ Dᴇʟᴇᴛᴇ Aᴄᴄᴏᴜɴᴛ & Bʟᴏᴄᴋᴇᴅ Aᴄᴄᴏᴜɴᴛ Iɴ Dᴀᴛᴀʙᴀsᴇ
-• /clear_junk_group - Cʟᴇᴀʀ Aᴅᴅ Rᴇᴍᴏᴠᴇᴅ Gʀᴏᴜᴘ Oʀ Dᴇᴀᴄᴛɪᴠᴀᴛᴇᴅ Gʀᴏᴜᴘs Oɴ Dʙ"""
+<b><i>Commands & Usage</b></i>
+🔮 <code>/logs</code> - <b><i>To Get The Recent Errorꜱ</b></i>
+🔮 <code>/delete</code> - <b><i>To Delete A Specific File From DB</b></i>
+🔮 <code>/deleteall</code> - <b><i>To Delete All Files From DB</b></i>
+🔮 <code>/users</code> - <b><i>To Get Liꜱt Of My Uꜱerꜱ And IDS</b></i>
+🔮 <code>/chats</code> - <b><i>To Get Liꜱt Of My Chatꜱ And IDS</b></i>
+🔮 <code>/channel</code> - <b><i>To Get Liꜱt Of Total Connected Channelꜱ</b></i>
+🔮 <code>/broadcast</code> - <b><i>To Broadcaꜱt A Meꜱꜱage To All Uꜱerꜱ</b></i>
+🔮 <code>/group_broadcast</code> - <b><i>To Broadcast A Message To All Connected Groups</b></i>
+🔮 <code>/leave</code>  - <b><i>(With Chat’s ID) To Leave From A Chat</b></i>
+🔮 <code>/disable</code>  - <b><i>(With Chat’s ID) To Diꜱable A Chat</b></i>
+🔮 <code>/invite</code> - <b><i>(With Chat’s ID) To Get The Invite Link Of Any Chat Where The Bot Is Admin</b></i>
+🔮 <code>/ban_user</code>  - <b><i>(With User’s ID) To Ban A Uꜱer</b></i>
+🔮 <code>/unban_user</code>  - <b><i>(With User’s ID) To Unban A Uꜱer</b></i>
+🔮 <code>/restart</code> - <b><i>To Restart The Bot</b></i>
+🔮 <code>/clear_junk</code> - <b><i>Clear All Delete Account & Blocked Account In Database</b></i>
+🔮 <code>/clear_junk_group</code> - <b><i>Clear Add Removed Group Or Deactivated Groups On DB</b></i>"""
 
 
-    STATUS_TXT = """<b>◉ ᴛᴏᴛᴀʟ ꜰɪʟᴇꜱ: <code>{}</code>
-◉ ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ: <code>{}</code>  
-◉ ᴛᴏᴛᴀʟ ᴄʜᴀᴛꜱ: <code>{}</code>
-◉ ᴜꜱᴇᴅ ᴅʙ ꜱɪᴢᴇ: <code>{}</code>
-◉ ꜰᴇᴇᴇ ᴅʙ ꜱɪᴢᴇ: <code>{}</code></b>"""
+    STATUS_TXT = """🔮 Total Files: <code>{}</code>
+🔮 <b><i>Total Users:</b></i> <code>{}</code>  
+🔮 <b><i>Total Chats:</b></i> <code>{}</code>
+🔮 <b><i>Capacity Of Used Space (DB):</b></i> <code>{}</code>
+🔮 <b><i>Space Remaining:</b></i> <code>{}</code>"""
 
-    LOG_TEXT_G = """<b>#ɴᴇᴡ_ɢʀᴏᴜᴩ
+    LOG_TEXT_G = """New Group!
 
-◉ ɢʀᴏᴜᴩ: {a}
-◉ ɢ-ɪᴅ: <code>{b}</code>
-◉ ʟɪɴᴋ: @{c}
-◉ ᴍᴇᴍʙᴇʀꜱ: <code>{d}</code>
-◉ ᴀᴅᴅᴇᴅ ʙʏ: {e}
+🔮 <b><i>Group:</b></i> {a}
+🔮 <b><i>ID (Group):</b></i> <code>{b}</code>
+🔮 <b><i>Link (Group):</b></i> @{c}
+🔮 <b><i>Members Count (Group):</b></i> <code>{d}</code>
+🔮 <b><i>Added BY:</b></i> {e}
 
-◉ ʙʏ: @{f}</b>"""
+🔮 <b><i>BY</b></i>: @{f}"""
   
-    LOG_TEXT_P = """#ɴᴇᴡ_ᴜꜱᴇʀ
+    LOG_TEXT_P = """New User!
     
-◉ ᴜꜱᴇʀ-ɪᴅ: <code>{}</code>
-◉ ᴀᴄᴄ-ɴᴀᴍᴇ: {}
-◉ ᴜꜱᴇʀɴᴀᴍᴇ: @{}
+🔮 <b><i>User Id:</b></i> <code>{}</code>
+🔮 <b><i>User’s Name:</b></i> {}
+🔮 <b><i>UserName:</b></i> @{}
 
-◉ ʙʏ: @{}</b>"""
+🔮 <b><i>BY:</b></i> @{}"""
   
-    GROUPMANAGER_TXT = """<b>Hᴇʟᴩ Fᴏʀ GʀᴏᴜᴩMᴀɴᴀɢᴇʀ</b>
+    GROUPMANAGER_TXT = """🔮<b><i>Help: Group Managing</b></i>🔮
 
-<i>Tʜɪꜱ Iꜱ Hᴇʟᴩ Oꜰ Yᴏᴜʀ Gʀᴏᴜᴩ Mᴀɴᴀɢɪɴɢ. Tʜɪꜱ Wɪʟʟ Wᴏʀᴋ Oɴʟʏ Fᴏʀ Gʀᴏᴜᴩ aᴅᴍɪɴꜱ</i>
+<b><i>Thiꜱ Iꜱ Helps Your Group Managing. Thiꜱ Will Work Only For Group ADMINS!</b></i>
 
-<b>Cᴏᴍᴍᴀɴᴅ & Uꜱᴀɢᴇ:</b>
-• /inkick - Cᴏᴍᴍᴀɴᴅ Wɪᴛʜ Rᴇǫᴜɪʀᴇᴅ Aʀɢᴜᴍᴇɴᴛs Aɴᴅ I Wɪʟʟ Kɪᴄᴋ Mᴇᴍʙᴇʀs Fʀᴏᴍ Gʀᴏᴜᴘ.
-• /instatus - Tᴏ Cʜᴇᴄᴋ Cᴜʀʀᴇɴᴛ Sᴛᴀᴛᴜs Oғ Cʜᴀᴛ Mᴇᴍʙᴇʀ Fʀᴏᴍ Gʀᴏᴜᴘ.
-• /dkick - Tᴏ Kɪᴄᴋ Dᴇʟᴇᴛᴇᴅ Aᴄᴄᴏᴜɴᴛs
-• /ban - To Bᴀɴ A Uꜱᴇʀ Fᴏʀᴍ Tʜᴇ Gʀᴏᴜᴩ
-• /unban - Uɴʙᴀɴ Tʜᴇ Bᴀɴɴᴇᴅ Uꜱᴇʀ
-• /tban - Tᴇᴍᴩᴏʀᴀʀʏ Bᴀɴ A Uꜱᴇʀ
-• /mute - To Mᴜᴛᴇ A Uꜱᴇʀ
-• /unmute - To Uɴᴍᴜᴛᴇ Tʜᴇ Mᴜᴛᴇᴅ Uꜱᴇʀ
-• /tmute - Wɪᴛʜ Vᴀʟᴜᴇ To Mᴜᴛᴇ Uᴩ To Pᴀʀᴛɪᴄᴜʟᴀʀ Tɪᴍᴇ Eɢ: <code>/tmute 2h</code> To Mᴜᴛᴇ 2Hᴏᴜʀ Vᴀʟᴜᴇꜱ Iꜱ (m/h/d)
-• /pin - Tᴏ Pɪɴ A Mᴇꜱꜱᴀɢᴇ Oɴ Yᴏᴜʀ Cʜᴀᴛ
-• /unpin - Tᴏ Uɴᴩɪɴ Tʜᴇ Mᴇꜱꜱᴀɢᴇ Oɴ Yᴏᴜʀ Cʜᴀᴛ
-• /purge - Dᴇʟᴇᴛᴇ Aʟʟ Mᴇssᴀɢᴇs Fʀᴏᴍ Tʜᴇ Rᴇᴘʟɪᴇᴅ Tᴏ Mᴇssᴀɢᴇ, Tᴏ Tʜᴇ Cᴜʀʀᴇɴᴛ Mᴇssᴀɢᴇ """
+<b><i>Command & Uꜱage:</b></i>
+🔮 <code>/inkick</code> - <b><i>Command With Required Arguments And I Will Kick Members From Group.</b></i>
+🔮 <code>/instatus</code> - <b><i>To Check Current Status Of Chat Member From Group.</b></i>
+🔮 <code>/dkick</code> - <b><i>To Kick Deleted Accounts</b></i>
+🔮 <code>/ban</code> - <b><i>To Ban A Uꜱer Form The Group</b></i>
+🔮 <code>/unban</code> - <b><i>Unban The Banned Uꜱer</b></i>
+🔮 <code>/tban</code> - <b><i>Temporary Ban A Uꜱer</b></i>
+🔮 <code>/mute</code> - <b><i>To Mute A Uꜱer</b></i>
+🔮 <code>/unmute</code> - <b><i>To Unmute The Muted Uꜱer</b></i>
+🔮 <code>/tmute</code> - <b><i>With Value To Mute Up To Particular Time EG:</b></i> <code>/tmute 2h</code> <b><i>To Mute 2 Hour Valueꜱ Iꜱ )m/h/d)</b></i>
+🔮 <code>/pin</code> - <b><i>To Pin A Meꜱꜱage On Your Chat</b></i>
+🔮 <code>/unpin</code> - <b><i>To Unpin The Meꜱꜱage On Your Chat</b></i>
+🔮 <code>/purge</code> - <b><i>Delete All Messages From The Replied To Message, To The Current Message</b></i>"""
 
-    EXTRAMOD_TXT = """<b>Hᴇʟᴩ Fᴏʀ Exᴛʀᴀ Mᴏᴅᴜʟᴇ</b>
+    EXTRAMOD_TXT = """🔮<b><i>Help: Extra Modules</b></i>🔮
 
-<i>Jᴜꜱᴛ Sᴇɴᴅ Aɴʏ Iᴍᴀɢᴇ Tᴏ Eᴅɪᴛ Iᴍᴀɢᴇ ✨</i>
+<b><i>Send Any Image (To Edit)</b></i>
 
-<b>Cᴏᴍᴍᴀɴᴅꜱ & Uꜱᴀɢᴇ:</b>
-• /id - Gᴇᴛ Iᴅ Oғ A Sᴘᴇᴄɪғᴇᴅ Usᴇʀ
-• /info  - Gᴇᴛ Iɴғᴏʀᴍᴀᴛɪᴏɴ Aʙᴏᴜᴛ A Usᴇʀ
-• /imdb  - Gᴇᴛ Tʜᴇ Fɪʟᴍ Iɴғᴏʀᴍᴀᴛɪᴏɴ Fʀᴏᴍ Iᴍᴅʙ Sᴏᴜʀᴄᴇ
-• /paste [ᴛᴇxᴛ] - Pᴀsᴛᴇ Tʜᴇ Gɪᴠᴇɴ Tᴇxᴛ Oɴ Pᴀsᴛʏ
-• /tts [ᴛᴇxᴛ] - Cᴏɴᴠᴇʀᴛ Tᴇxᴛ Tᴏ Sᴘᴇᴇᴄʜ
-• /telegraph - Sᴇɴᴅ Mᴇ Tʜɪs Cᴏᴍᴍᴀɴᴅ Rᴇᴘʟʏ Wɪᴛʜ Pɪᴄᴛᴜʀᴇ Oʀ Vɪᴅᴇ Uɴᴅᴇʀ (𝟻ᴍʙ)
-• /json - Rᴇᴩʟʏ Wɪᴛʜ Aɴʏ Mᴇꜱꜱᴀɢᴇ Tᴏ Gᴇᴛ Mᴇꜱꜱᴀɢᴇ Iɴꜰᴏ (ᴜꜱᴇꜰᴜʟʟ ꜰᴏʀ ɢʀᴏᴜᴩ)
-• /written - Rᴇᴩʟʏ Wɪᴛʜ Tᴇxᴛ Tᴏ Gᴇᴛ Fɪʟᴇ (ᴜꜱᴇꜰᴜʟʟ ꜰᴏʀ ᴄᴏᴅᴇʀꜱ)
-• /carbon - Rᴇᴘʟʏ Wɪᴛʜ Tᴇxᴛ Tᴏ Gᴇᴛ Cᴀʀʙᴏɴᴀᴛᴇᴅ Iᴍᴀɢᴇ
-• /font [ᴛᴇxᴛ] - Tᴏ Cʜᴀɴɢᴇ Yᴏᴜʀ Tᴇxᴛ Fᴏɴᴛs Tᴏ Fᴀɴᴄʏ Fᴏɴᴛ
-• /share - Rᴇᴘʟʏ Wɪᴛʜ Tᴇxᴛ Tᴏ Gᴇᴛ Tᴇxᴛ Sʜᴀʀᴀʙʟᴇ Lɪɴᴋ
-• /song [ɴᴀᴍᴇ] - Tᴏ Sᴇᴀʀᴄʜ Tʜᴇ Sᴏɴɢ Iɴ YᴏᴜTᴜʙᴇ
-• /video [ʟɪɴᴋ] - Tᴏ Dᴏᴡɴʟᴏᴀᴅ Tʜᴇ YᴏᴜTᴜʙᴇ Vɪᴅᴇᴏ"""    
+<b><i>Commands & Usage</b></i>
+🔮 <code>/id</code> - <b><i>Get Id Of A Specifed User</b></i>
+🔮 <code>/info</code>  - <b><i>Get Information About A User</b></i>
+🔮 <code>/imdb</code>  - <b><i>Get The Film Information From Imdb Source</b></i>
+🔮 <code>/paste [TEXT]</code> - <b><i>Paste The Given Text On Pasty</b></i>
+🔮 <code>/tts [TEXT]</code> - <b><i>Convert Text To Speech</b></i>
+🔮 <code>/telegraph</code> - <b><i>Send Me This Command Reply With Picture Or Vide Under (5mb)</b></i>
+🔮 <code>/json</code> - <b><i>Reply With Any Meꜱꜱage To Get Meꜱꜱage Info) uꜱeful for group</b></i>
+🔮 <code>/written</code> - <b><i>Reply With Text To Get File (uꜱeful for coderꜱ)</b></i>
+🔮 <code>/carbon</code> - <b><i>Reply With Text To Get Carbonated Image</b></i>
+🔮 <code>/font [TEXT]</code> - <b><i>To Change Your Text Fonts To Fancy Font</b></i>
+🔮 <code>/share</code> - <b><i>Reply With Text To Get Text Sharable Link</b></i>
+🔮 <code>/song [NAME]</code> - <b><i>To Search The Song In YouTube</b></i>
+🔮 <code>/video [LINK]</code> - <b><i>To Download The YouTube Video</b></i>"""    
     
     CREATOR_REQUIRED = "❗<b>Yᴏᴜ Hᴀᴠᴇ To Bᴇ Tʜᴇ Gʀᴏᴜᴩ Cʀᴇᴀᴛᴏʀ Tᴏ Dᴏ Tʜᴀᴛ</b>"
       
@@ -210,7 +210,7 @@ Tᴏᴛᴀʟ Dɪꜱᴋ: {}
 Uꜱᴇᴅ Dɪꜱᴋ: {} ({}%)
 Fʀᴇᴇ Dɪꜱᴋ: {}"""
     
-    BUTTON_LOCK_TEXT = "Hᴇʏ {query}\nTʜɪꜱ Iꜱ Nᴏᴛ Fᴏʀ Yᴏᴜ. Sᴇᴀʀᴄʜ Yᴏᴜʀ Sᴇʟꜰ"
+    BUTTON_LOCK_TEXT = "Buddy {query}\nThis Iꜱ Not For You. Search Your Self"
    
     FORCE_SUB_TEXT = "Sᴏʀʀʏ Bʀᴏ Yᴏᴜʀ Nᴏᴛ Jᴏɪɴᴇᴅ Mʏ Cʜᴀɴɴᴇʟ Sᴏ Pʟᴇᴀsᴇ Cʟɪᴄᴋ Jᴏɪɴ Bᴜᴛᴛᴏɴ Tᴏ Jᴏɪɴ Mʏ Cʜᴀɴɴᴇʟ Aɴᴅ Tʀʏ Aɢᴀɪɴ"
    
