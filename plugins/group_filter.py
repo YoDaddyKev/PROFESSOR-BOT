@@ -32,19 +32,19 @@ async def fil_mod(client, message):
       try: 
          args = message.text.split(None, 1)[1].lower() 
       except: 
-         return await message.reply("**ɪɴᴄᴏᴍᴩʟᴇᴛᴇ ᴄᴏᴍᴍᴀɴᴅ...**")
+         return await message.reply("𝘊𝘰𝘮𝘮𝘢𝘯𝘥 𝘐𝘯𝘤𝘰𝘮𝘱𝘭𝘦𝘵𝘦")
       
-      m = await message.reply("**ꜱᴇᴛᴛɪɴɢ....**")
+      m = await message.reply("𝘚𝘦𝘵𝘵𝘪𝘯𝘨")
 
       if args in mode_on:
           FILTER_MODE[str(message.chat.id)] = "True"
-          await m.edit("**ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ᴇɴᴀʙʟᴇᴅ**")
+              await m.edit("𝘈𝘶𝘵𝘰𝘍𝘪𝘭𝘵𝘦𝘳 𝘈𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥")
       
       elif args in mode_of:
           FILTER_MODE[str(message.chat.id)] = "False"
-          await m.edit("**ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ᴅɪꜱᴀʙʟᴇᴅ**")
+              await m.edit("𝘈𝘶𝘵𝘰𝘍𝘪𝘭𝘵𝘦𝘳 𝘜𝘯𝘢𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥")
       else:
-          await m.edit("ᴜꜱᴇ :- `/autofilter on` ᴏʀ `/autofilter off`")
+          await m.edit("𝘜𝘵𝘪𝘭𝘪𝘻𝘦_/autofilter on` 𝘵𝘰 𝘰𝘮𝘪𝘵 `/autofilter off`")
 
 
 @Client.on_message(filters.command('g_filter') & filters.group & filters.create(admin_filter))
@@ -55,17 +55,17 @@ async def g_fil_mod(client, message):
       try: 
          args = message.text.split(None, 1)[1].lower() 
       except: 
-         return await message.reply("**ɪɴᴄᴏᴍᴩʟᴇᴛᴇ ᴄᴏᴍᴍᴀɴᴅ...**")
+         return await message.reply("𝘊𝘰𝘮𝘮𝘢𝘯𝘥 𝘐𝘯𝘤𝘰𝘮𝘱𝘭𝘦𝘵𝘦")
       
-      m = await message.reply("**ꜱᴇᴛᴛɪɴɢ...**")
+      m = await message.reply("𝘚𝘦𝘵𝘵𝘪𝘯𝘨𝘴")
 
       if args in mode_on:
           G_MODE[str(message.chat.id)] = "True"
-          await m.edit("**ɢʟᴏʙᴀʟ ꜰɪʟᴛᴇʀ ᴇɴᴀʙʟᴇᴅ**")
+          await m.edit("𝘎𝘭𝘰𝘣𝘢𝘭𝘍𝘪𝘭𝘵𝘦𝘳 𝘢𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥")
       
       elif args in mode_of:
           G_MODE[str(message.chat.id)] = "False"
-          await m.edit("**ɢʟᴏʙᴀʟ ꜰɪʟᴛᴇʀ ᴅɪꜱᴀʙʟᴇᴅ**")
+          await m.edit("𝘎𝘭𝘰𝘣𝘢𝘭𝘍𝘪𝘭𝘵𝘦𝘳 𝘜𝘯𝘈𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥")
       else:
           await m.edit("ᴜꜱᴇ :- `/g_filter on` ᴏʀ `/g_filter off`")
 
@@ -78,7 +78,7 @@ async def next_page(bot, query):
     try: offset = int(offset)
     except: offset = 0
     search = temp.GP_BUTTONS.get(key)
-    if not search: return await query.answer("Yᴏᴜ Aʀᴇ Usɪɴɢ Oɴᴇ Oғ Mʏ Oʟᴅ Mᴇssᴀɢᴇs, Pʟᴇᴀsᴇ Sᴇɴᴅ Tʜᴇ Rᴇǫᴜᴇsᴛ Aɢᴀɪɴ", show_alert=True)
+    if not search: return await query.answer("𝘠𝘰𝘶 𝘈𝘳𝘦 𝘜𝘴𝘪𝘯𝘨 𝘖𝘯𝘦 𝘖𝘧 𝘔𝘺 𝘖𝘭𝘥 𝘔𝘦𝘴𝘴𝘢𝘨𝘦𝘴, 𝘙𝘦𝘲𝘶𝘦𝘴𝘵 𝘈𝘨𝘢𝘪𝘯", show_alert=True)
     
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
     try: n_offset = int(n_offset)
@@ -100,7 +100,7 @@ async def next_page(bot, query):
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'files#{nxreq}#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'files#{nxreq}#{file.file_id}')] for file in files ]
 
-    btn.insert(0, [InlineKeyboardButton("🔗 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔗", "howdl")])
+    btn.insert(0, [InlineKeyboardButton("🔮𝘏𝘰𝘸 𝘛𝘰 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥🔮", "howdl")])
     if 0 < offset <= 10:
         off_set = 0
     elif offset == 0:
@@ -109,19 +109,19 @@ async def next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("⬅️ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
-             InlineKeyboardButton(f"❄️ ᴩᴀɢᴇꜱ {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages")]
+            [InlineKeyboardButton("－ 𝘉𝘢𝘤𝘬", callback_data=f"next_{req}_{key}_{off_set}"),
+             InlineKeyboardButton(f"🔮𝘗𝘢𝘨𝘦𝘴 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages")]
         )
     elif off_set is None:
         btn.append(
-            [InlineKeyboardButton(f"❄️ {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("ɴᴇxᴛ ➡️", callback_data=f"next_{req}_{key}_{n_offset}")])
+            [InlineKeyboardButton(f"🔮 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
+             InlineKeyboardButton("𝘕𝘦𝘹𝘵 －", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
-                InlineKeyboardButton("⬅️ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"❄️ {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-                InlineKeyboardButton("ɴᴇxᴛ ➡️", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("－ 𝘉𝘢𝘤𝘬", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton(f"🔮 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
+                InlineKeyboardButton("𝘕𝘦𝘹𝘵 －", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     
@@ -141,7 +141,7 @@ async def advantage_spoll_choker(bot, query):
         return await query.message.delete()
     movies = temp.GP_SPELL.get(query.message.reply_to_message.id)
     if not movies:
-        return await query.answer("Yᴏᴜ Aʀᴇ Usɪɴɢ Oɴᴇ Oғ Mʏ Oʟᴅ Mᴇssᴀɢᴇs, Pʟᴇᴀsᴇ Sᴇɴᴅ Tʜᴇ Rᴇǫᴜᴇsᴛ Aɢᴀɪɴ", show_alert=True)
+        return await query.answer("𝘠𝘰𝘶 𝘈𝘳𝘦 𝘜𝘴𝘪𝘯𝘨 𝘖𝘯𝘦 𝘖𝘧 𝘔𝘺 𝘖𝘭𝘥 𝘔𝘦𝘴𝘴𝘢𝘨𝘦𝘴，𝘙𝘦𝘲𝘶𝘦𝘴𝘵 𝘈𝘨𝘢𝘪𝘯", show_alert=True)
     movie = movies[(int(movie_))]
     await query.answer('Checking for Movie in database...')
     k = await manual_filters(bot, query.message, text=movie)
@@ -216,18 +216,18 @@ async def auto_filter(client, msg, spoll=False):
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}#{req}#{file.file_id}')] for file in files ] 
 
-    btn.insert(0, [InlineKeyboardButton("🔗 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔗", "howdl")])
+    btn.insert(0, [InlineKeyboardButton("🔮𝘏𝘰𝘸 𝘛𝘰 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥🔮", "howdl")])
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         temp.GP_BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton(text=f"❄️ ᴩᴀɢᴇꜱ 1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
-             InlineKeyboardButton(text="➡️ ɴᴇxᴛ", callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton(text=f"🔮𝘗𝘢𝘨𝘦𝘴 1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
+             InlineKeyboardButton(text="𝘕𝘦𝘹𝘵 －", callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="❄️ ᴩᴀɢᴇꜱ 1/1", callback_data="pages")]
+            [InlineKeyboardButton(text="🔮𝘗𝘢𝘨𝘦𝘴 1/1", callback_data="pages")]
         )
     
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
@@ -267,7 +267,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Hᴇʀᴇ Is Wʜᴀᴛ I Fᴏᴜɴᴅ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}"
+        cap = f"𝘙𝘦𝘴𝘶𝘭𝘵𝘴 𝘧𝘳𝘰𝘮 𝘺𝘰𝘶𝘳 𝘲𝘶𝘦𝘳𝘺 {search}"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
@@ -304,7 +304,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏ Mᴏᴠɪᴇ Iɴ Tʜᴀᴛ Nᴀᴍᴇ")
+        k = await msg.reply("𝘐 𝘤𝘰𝘶𝘭𝘥𝘯𝘵 𝘧𝘪𝘯𝘥 𝘢𝘯𝘺 𝘧𝘪𝘭𝘦 𝘸𝘪𝘵𝘩 𝘵𝘩𝘢𝘵 𝘯𝘢𝘮𝘦")
         await asyncio.sleep(8)
         return await k.delete()
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
@@ -329,13 +329,13 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏᴛʜɪɴɢ Rᴇʟᴀᴛᴇᴅ Tᴏ Tʜᴀᴛ. Cʜᴇᴄᴋ Yᴏᴜʀ Sᴘᴇʟʟɪɴɢ")
+        k = await msg.reply("𝘐 𝘊𝘰𝘶𝘭𝘥𝘯，𝘵 𝘍𝘪𝘯𝘥 𝘈𝘯𝘺𝘵𝘩𝘪𝘯𝘨 𝘙𝘦𝘭𝘢𝘵𝘦𝘥 𝘛𝘰 𝘛𝘩𝘢𝘵． 𝘊𝘩𝘦𝘤𝘬 𝘠𝘰𝘶𝘳 𝘚𝘱𝘦𝘭𝘭𝘪𝘯𝘨")
         await asyncio.sleep(8)
         return await k.delete()
     temp.GP_SPELL[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"spolling#{user}#{k}",)] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏᴛʜɪɴɢ Rᴇʟᴀᴛᴇᴅ Tᴏ Tʜᴀᴛ. Dɪᴅ Yᴏᴜ Mᴇᴀɴ Aɴʏ Oɴᴇ Oғ Tʜᴇsᴇ?", reply_markup=InlineKeyboardMarkup(btn))
+    await msg.reply("𝘐 𝘊𝘰𝘶𝘭𝘥𝘯，𝘵 𝘍𝘪𝘯𝘥 𝘈𝘯𝘺𝘵𝘩𝘪𝘯𝘨 𝘙𝘦𝘭𝘢𝘵𝘦𝘥 𝘛𝘰 𝘛𝘩𝘢𝘵． 𝘋𝘪𝘥 𝘠𝘰𝘶 𝘔𝘦𝘢𝘯 𝘈𝘯𝘺 𝘖𝘯𝘦 𝘖𝘧 𝘛𝘩𝘦𝘴𝘦", reply_markup=InlineKeyboardMarkup(btn))
 
 
 async def manual_filters(client, message, text=False):
