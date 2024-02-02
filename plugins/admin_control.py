@@ -32,7 +32,7 @@ async def savegroup_and_welcome(bot, message):
             return await bot.leave_chat(message.chat.id)
            
         buttons = [[InlineKeyboardButton('🔮𝘏𝘦𝘭𝘱🔮', url=f"https://t.me/{temp.U_NAME}?start=help")]]
-        await message.reply(text="𝘗𝘖𝘖𝘍\n 𝘎𝘪𝘷𝘦 𝘮𝘦 𝘳𝘪𝘨𝘩𝘵𝘴 𝘲𝘶𝘪𝘤𝘬\n" 𝘊𝘰𝘯𝘧𝘶𝘴𝘦𝘥 𝘣𝘶𝘵𝘵𝘰𝘯 𝘣𝘦𝘭𝘰𝘸 𝘪𝘴 𝘧𝘰𝘳 𝘺𝘰𝘶, reply_markup=InlineKeyboardMarkup(buttons))
+        await message.reply(text="𝘗𝘖𝘖𝘍\n 𝘎𝘪𝘷𝘦 𝘮𝘦 𝘳𝘪𝘨𝘩𝘵𝘴 𝘲𝘶𝘪𝘤𝘬\n 𝘊𝘰𝘯𝘧𝘶𝘴𝘦𝘥 𝘣𝘶𝘵𝘵𝘰𝘯 𝘣𝘦𝘭𝘰𝘸 𝘪𝘴 𝘧𝘰𝘳 𝘺𝘰𝘶", reply_markup=InlineKeyboardMarkup(buttons))
     else:
         for u in message.new_chat_members:
             if (temp.MELCOW).get('welcome') is not None:
