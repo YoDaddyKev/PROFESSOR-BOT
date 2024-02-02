@@ -25,14 +25,14 @@ async def savegroup_and_welcome(bot, message):
             await bot.send_message(LOG_CHANNEL, script.LOG_TEXT_G.format(a=message.chat.title, b=message.chat.id, c=message.chat.username, d=total, e=r_j, f=bot.mention))       
             await db.add_chat(message.chat.id, message.chat.title, message.chat.username)
         if message.chat.id in temp.BANNED_CHATS:
-            buttons = [[InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ', url=f'https://t.me/{SUPPORT_CHAT}')]]
-            k = await message.reply("CHAT NOT ALLOWED 🐞\n\nMʏ Aᴅᴍɪɴs Hᴀs Rᴇsᴛʀɪᴄᴛᴇᴅ Mᴇ Fʀᴏᴍ Wᴏʀᴋɪɴɢ Hᴇʀᴇ ! Iғ Yᴏᴜ Wᴀɴᴛ Tᴏ Kɴᴏᴡ Mᴏʀᴇ Aʙᴏᴜᴛ Iᴛ Cᴏɴᴛᴀᴄᴛ Sᴜᴘᴘᴏʀᴛ", reply_markup=InlineKeyboardMarkup(buttons))
+            buttons = [[InlineKeyboardButton('🔮𝘌𝘯𝘲𝘶𝘪𝘳𝘦𝘴🔮', url=f'https://t.me/{SUPPORT_CHAT}')]]
+            k = await message.reply("𝘐𝘮 𝘯𝘰𝘵 𝘢𝘭𝘭𝘰𝘸𝘦𝘥 𝘩𝘦𝘳𝘦 𝘣𝘶𝘥𝘥𝘺 \n\n𝘐 𝘵𝘩𝘪𝘯𝘬 𝘮𝘺 𝘰𝘸𝘯𝘦𝘳 𝘬𝘯𝘰𝘸𝘴 𝘸𝘩𝘺 𝘵𝘩𝘰", reply_markup=InlineKeyboardMarkup(buttons))
             try: await k.pin()
             except: pass
             return await bot.leave_chat(message.chat.id)
            
-        buttons = [[InlineKeyboardButton('Hᴇʟᴩ', url=f"https://t.me/{temp.U_NAME}?start=help")]]
-        await message.reply(text="❤️ Tʜᴀɴᴋs Tᴏ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜ'ʀ Gʀᴏᴜᴘ.\n» Dᴏɴ'ᴛ Fᴏʀɢᴇᴛ Tᴏ Mᴀᴋᴇ Mᴇ Aᴅᴍɪɴ.\n» Is Aɴʏ Dᴏᴜʙᴛ's Aʙᴏᴜᴛ Usɪɴɢ Mᴇ Cʟɪᴄᴋ Bᴇʟᴏᴡ Bᴜᴛᴛᴏɴ...✨", reply_markup=InlineKeyboardMarkup(buttons))
+        buttons = [[InlineKeyboardButton('🔮𝘏𝘦𝘭𝘱🔮', url=f"https://t.me/{temp.U_NAME}?start=help")]]
+        await message.reply(text="𝘗𝘖𝘖𝘍\n 𝘎𝘪𝘷𝘦 𝘮𝘦 𝘳𝘪𝘨𝘩𝘵𝘴 𝘲𝘶𝘪𝘤𝘬\n" 𝘊𝘰𝘯𝘧𝘶𝘴𝘦𝘥 𝘣𝘶𝘵𝘵𝘰𝘯 𝘣𝘦𝘭𝘰𝘸 𝘪𝘴 𝘧𝘰𝘳 𝘺𝘰𝘶, reply_markup=InlineKeyboardMarkup(buttons))
     else:
         for u in message.new_chat_members:
             if (temp.MELCOW).get('welcome') is not None:
@@ -44,20 +44,20 @@ async def savegroup_and_welcome(bot, message):
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
-    if len(message.command) == 1: return await message.reply('Gɪᴠᴇ Mᴇ A Cʜᴀᴛ Iᴅ')
+    if len(message.command) == 1: return await message.reply('𝘎𝘪𝘷𝘦 𝘔𝘦 𝘈 𝘊𝘩𝘢𝘵 ')
     chat = message.command[1]
     try: chat = int(chat)
     except: chat = chat
     try:
-        buttons = [[InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ', url=f'https://t.me/{SUPPORT_CHAT}')]]
-        await bot.send_message(chat_id=chat, text='<b>Hᴇʟʟᴏ Fʀɪᴇɴᴅs, \nMʏ Aᴅᴍɪɴ Hᴀs Tᴏʟᴅ Mᴇ Tᴏ Lᴇᴀᴠᴇ Fʀᴏᴍ Gʀᴏᴜᴘ Sᴏ I Gᴏ! Iғ Yᴏᴜ Wᴀɴɴᴀ Aᴅᴅ Mᴇ Aɢᴀɪɴ Cᴏɴᴛᴀᴄᴛ Mʏ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ</b>', reply_markup=InlineKeyboardMarkup(buttons))
+        buttons = [[InlineKeyboardButton('🔮𝘌𝘯𝘲𝘶𝘪𝘳𝘦𝘴🔮', url=f'https://t.me/{SUPPORT_CHAT}')]]
+        await bot.send_message(chat_id=chat, text='<b>𝘠𝘖 𝘐 𝘸𝘢𝘴 𝘵𝘰𝘭𝘥 𝘯𝘰𝘵 𝘵𝘰 𝘸𝘰𝘳𝘬 𝘩𝘦𝘳𝘦 𝘢𝘯𝘺𝘮𝘰𝘳𝘦 𝘉𝘠𝘌</b>', reply_markup=InlineKeyboardMarkup(buttons))
         await bot.leave_chat(chat)
     except Exception as e:
-        await message.reply(f'Eʀʀᴏʀ: {e}')
+        await message.reply(f'𝘌𝘳𝘳𝘰𝘳: {e}')
 
 @Client.on_message(filters.command('disable') & filters.user(ADMINS))
 async def disable_chat(bot, message):
-    if len(message.command) == 1: return await message.reply('Gɪᴠᴇ Mᴇ A Cʜᴀᴛ Iᴅ')
+    if len(message.command) == 1: return await message.reply('𝘎𝘪𝘷𝘦 𝘔𝘦 𝘈 𝘊𝘩𝘢𝘵 𝘐𝘋')
     r = message.text.split(None)
     if len(r) > 2:
         reason = message.text.split(None, 2)[2]
@@ -68,41 +68,41 @@ async def disable_chat(bot, message):
     try:
         chat_ = int(chat)
     except:
-        return await message.reply('Gɪᴠᴇ Mᴇ A Vᴀʟɪᴅ Cʜᴀᴛ ID')
+        return await message.reply('𝘎𝘪𝘷𝘦 𝘔𝘦 𝘈 𝘝𝘢𝘭𝘪𝘥 𝘊𝘩𝘢𝘵 𝘐𝘋')
     cha_t = await db.get_chat(int(chat_))
     if not cha_t:
-        return await message.reply("Cʜᴀᴛ Nᴏᴛ Fᴏᴜɴᴅ Iɴ DB")
+        return await message.reply("𝘊𝘩𝘢𝘵 𝘕𝘰𝘵 𝘍𝘰𝘶𝘯𝘥 𝘐𝘯 𝘋𝘉")
     if cha_t['is_disabled']:
-        return await message.reply(f"Tʜɪꜱ Cʜᴀᴛ Is Aʟʀᴇᴅʏ  Dɪꜱᴀʙʟᴇᴅ:\nRᴇᴀꜱᴏɴ: <code> {cha_t['reason']} </code>")
+        return await message.reply(f"𝘛𝘩𝘪ꜱ 𝘊𝘩𝘢𝘵 𝘐𝘴 𝘈𝘭𝘳𝘦𝘢𝘥𝘺 𝘋𝘪ꜱ𝘢𝘣𝘭𝘦𝘥:\n𝘙𝘦𝘢ꜱ𝘰𝘯: <code> {cha_t['reason']} </code>")
     await db.disable_chat(int(chat_), reason)
     temp.BANNED_CHATS.append(int(chat_))
-    await message.reply('Cʜᴀᴛ Sᴜᴄᴄᴇꜱꜰᴜʟʟʏ Dɪꜱᴀʙʟᴇᴅ')
+    await message.reply('𝘊𝘩𝘢𝘵 𝘚𝘶𝘤𝘤𝘦ꜱ𝘧𝘶𝘭𝘭𝘺 𝘋𝘪ꜱ𝘢𝘣𝘭𝘦𝘥')
     try:
-        buttons = [[InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ', url=f'https://t.me/{SUPPORT_CHAT}')]]
-        await bot.send_message(chat_id=chat_,  text=f'<b>Hᴇʟʟᴏ Fʀɪᴇɴᴅs, \nᴍʏ Aᴅᴍɪɴ Hᴀs Tᴏʟᴅ Mᴇ Tᴏ Lᴇᴀᴠᴇ Fʀᴏᴍ Gʀᴏᴜᴘ Sᴏ I Gᴏ! Iғ Yᴏᴜ Wᴀɴɴᴀ Aᴅᴅ Mᴇ Aɢᴀɪɴ Cᴏɴᴛᴀᴄᴛ Mʏ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ.</b> \nRᴇᴀꜱᴏɴ : <code>{reason}</code>', reply_markup=InlineKeyboardMarkup(buttons))
+        buttons = [[InlineKeyboardButton('🔮𝘌𝘯𝘲𝘶𝘪𝘳𝘦𝘴🔮', url=f'https://t.me/{SUPPORT_CHAT}')]]
+        await bot.send_message(chat_id=chat_,  text=f'<b>𝘠𝘖 𝘐 𝘸𝘢𝘴 𝘵𝘰𝘭𝘥 𝘯𝘰𝘵 𝘵𝘰 𝘸𝘰𝘳𝘬 𝘩𝘦𝘳𝘦 𝘢𝘯𝘺𝘮𝘰𝘳𝘦 𝘉𝘠𝘌</b> \n𝘙𝘦𝘢ꜱ𝘰𝘯 : <code>{reason}</code>', reply_markup=InlineKeyboardMarkup(buttons))
         await bot.leave_chat(chat_)
     except Exception as e:
-        await message.reply(f"Eʀʀᴏʀ: {e}")
+        await message.reply(f"𝘌𝘳𝘳𝘰𝘳: {e}")
 
 
 @Client.on_message(filters.command('enable') & filters.user(ADMINS))
 async def re_enable_chat(bot, message):
-    if len(message.command) == 1: return await message.reply('Gɪᴠᴇ Mᴇ A Cʜᴀᴛ Iᴅ')
+    if len(message.command) == 1: return await message.reply('𝘎𝘪𝘷𝘦 𝘔𝘦 𝘈 𝘊𝘩𝘢𝘵 𝘐𝘋')
     chat = message.command[1]
     try: chat_ = int(chat)
-    except: return await message.reply('Gɪᴠᴇ Mᴇ A Vᴀʟɪᴅ Cʜᴀᴛ ID')
+    except: return await message.reply('𝘎𝘪𝘷𝘦 𝘔𝘦 𝘈 𝘝𝘢𝘭𝘪𝘥 𝘊𝘩𝘢𝘵 𝘐𝘋')
     sts = await db.get_chat(int(chat))
-    if not sts: return await message.reply("Cʜᴀᴛ Nᴏᴛ Fᴏᴜɴᴅ Iɴ DB")
+    if not sts: return await message.reply("𝘊𝘩𝘢𝘵 𝘕𝘰𝘵 𝘍𝘰𝘶𝘯𝘥 𝘐𝘯 𝘋𝘉")
     if not sts.get('is_disabled'):
-        return await message.reply('Tʜɪꜱ Cʜᴀᴛ Iꜱ Nᴏᴛ Yᴇᴛ Dɪꜱᴀʙʟᴇᴅ')
+        return await message.reply('𝘛𝘩𝘪ꜱ 𝘊𝘩𝘢𝘵 𝘐ꜱ 𝘕𝘰𝘵 𝘠𝘦𝘵 𝘋𝘪ꜱ𝘢𝘣𝘭𝘦𝘥')
     await db.re_enable_chat(int(chat_))
     temp.BANNED_CHATS.remove(int(chat_))
-    await message.reply("Cʜᴀᴛ Sᴜᴄᴄᴇꜱꜰᴜʟʟʏ Rᴇ-Eɴᴀʙʟᴇᴅ")
+    await message.reply("𝘊𝘩𝘢𝘵 𝘚𝘶𝘤𝘤𝘦ꜱ𝘧𝘶𝘭𝘭𝘺 𝘙𝘦－𝘌𝘯𝘢𝘣𝘭𝘦𝘥")
 
 
 @Client.on_message(filters.command('stats') & filters.incoming)
 async def get_ststs(bot, message):
-    rju = await message.reply('<b>Pʟᴇᴀꜱᴇ Wᴀɪᴛ...</b>')
+    rju = await message.reply('<b>𝘗𝘭𝘦𝘢ꜱ𝘦 𝘞𝘢𝘪𝘵...</b>')
     total_users = await db.total_users_count()
     totl_chats = await db.total_chat_count()
     files = await Media.count_documents()
@@ -122,14 +122,14 @@ async def gen_invite(bot, message):
     try:
         link = await bot.create_chat_invite_link(chat)
     except ChatAdminRequired:
-        return await message.reply("Iɴᴠɪᴛᴇ Lɪɴᴋ Gᴇɴᴇʀᴀᴛɪᴏɴ Fᴀɪʟᴇᴅ, Iᴀᴍ Nᴏᴛ Hᴀᴠɪɴɢ Sᴜғғɪᴄɪᴇɴᴛ Rɪɢʜᴛs")
+        return await message.reply("𝘐𝘯𝘷𝘪𝘵𝘦 𝘓𝘪𝘯𝘬 𝘎𝘦𝘯𝘦𝘳𝘢𝘵𝘪𝘰𝘯 𝘍𝘢𝘪𝘭𝘦𝘥， 𝘐 𝘋𝘰𝘯𝘵 𝘏𝘢𝘷𝘦 𝘚𝘶𝘧𝘧𝘪𝘤𝘪𝘦𝘯𝘵 𝘙𝘪𝘨𝘩𝘵𝘴")
     except Exception as e:
         return await message.reply(f'Eʀʀᴏʀ: {e}')
     await message.reply(f'Hᴇʀᴇ Iꜱ Yᴏᴜʀ Iɴᴠɪᴛᴇ Lɪɴᴋ: {link.invite_link}')
 
 @Client.on_message(filters.command('ban_user') & filters.user(ADMINS))
 async def ban_a_user(bot, message):
-    if len(message.command) == 1: return await message.reply('Gɪᴠᴇ Mᴇ A Uꜱᴇʀ Iᴅ / Uꜱᴇʀɴᴀᴍᴇ')
+    if len(message.command) == 1: return await message.reply('𝘎𝘪𝘷𝘦 𝘔𝘦 𝘈 𝘜𝘴𝘦𝘳 𝘐𝘋 ／ 𝘜ꜱ𝘦𝘳𝘯𝘢𝘮𝘦')
     r = message.text.split(None)
     if len(r) > 2:
         reason = message.text.split(None, 2)[2]
@@ -140,12 +140,12 @@ async def ban_a_user(bot, message):
     try: chat = int(chat)
     except: pass
     try: k = await bot.get_users(chat)
-    except PeerIdInvalid: return await message.reply("Tʜɪs Is Aɴ Iɴᴠᴀʟɪᴅ Usᴇʀ, Mᴀᴋᴇ Sᴜʀᴇ Iᴀ Hᴀᴠᴇ Mᴇᴛ Hɪᴍ Bᴇғᴏʀᴇ")
-    except IndexError: return await message.reply("Tʜɪs Mɪɢʜᴛ Bᴇ A Cʜᴀɴɴᴇʟ, Mᴀᴋᴇ Sᴜʀᴇ Iᴛs A Usᴇʀ.")
-    except Exception as e: return await message.reply(f'Eʀʀᴏʀ: {e}')
+    except PeerIdInvalid: return await message.reply("𝘛𝘩𝘪𝘴 𝘐𝘴 𝘈𝘯 𝘐𝘯𝘷𝘢𝘭𝘪𝘥 𝘜𝘴𝘦𝘳， 𝘔𝘢𝘬𝘦 𝘚𝘶𝘳𝘦 𝘐 𝘏𝘢𝘷𝘦 𝘔𝘦𝘵 𝘏𝘪𝘮 𝘉𝘦𝘧𝘰𝘳𝘦")
+    except IndexError: return await message.reply("𝘛𝘩𝘪𝘴 𝘔𝘪𝘨𝘩𝘵 𝘉𝘦 𝘈 𝘊𝘩𝘢𝘯𝘯𝘦𝘭， 𝘔𝘢𝘬𝘦 𝘚𝘶𝘳𝘦 𝘐𝘵𝘴 𝘈 𝘜𝘴𝘦𝘳.")
+    except Exception as e: return await message.reply(f'𝘌𝘳𝘳𝘰𝘳: {e}')
     else:
         jar = await db.get_ban_status(k.id)
-        if jar['is_banned']: return await message.reply(f"{k.mention} Iꜱ Aʟʀᴇᴅʏ Bᴀɴɴᴇᴅ\nRᴇᴀꜱᴏɴ: {jar['ban_reason']}")
+        if jar['is_banned']: return await message.reply(f"{k.mention} 𝘐ꜱ 𝘈𝘭𝘳𝘦𝘥𝘺 𝘉𝘢𝘯𝘯𝘦𝘥\n𝘙𝘦𝘢ꜱ𝘰𝘯: {jar['ban_reason']}")
         await db.ban_user(k.id, reason)
         temp.BANNED_USERS.append(k.id)
         await message.reply(f"Sᴜᴄᴄᴇꜱꜰᴜʟʟʏ Bᴀɴɴᴇᴅ {k.mention}")
@@ -154,7 +154,7 @@ async def ban_a_user(bot, message):
     
 @Client.on_message(filters.command('unban_user') & filters.user(ADMINS))
 async def unban_a_user(bot, message):
-    if len(message.command) == 1: return await message.reply('Gɪᴠᴇ Mᴇ A Uꜱᴇʀ Iᴅ / Uꜱᴇʀɴᴀᴍᴇ')
+    if len(message.command) == 1: return await message.reply('𝘎𝘪𝘷𝘦 𝘔𝘦 𝘈 𝘜ꜱ𝘦𝘳 𝘐𝘋 / 𝘜ꜱ𝘦𝘳𝘯𝘢𝘮𝘦')
     r = message.text.split(None)
     if len(r) > 2:
         reason = message.text.split(None, 2)[2]
@@ -179,7 +179,7 @@ async def unban_a_user(bot, message):
     
 @Client.on_message(filters.command('users') & filters.user(ADMINS))
 async def list_users(bot, message):
-    sps = await message.reply('Gᴇᴛᴛɪɴɢ Lɪꜱᴛ Oꜰ Uꜱᴇʀꜱ')
+    sps = await message.reply('𝘎𝘦𝘵𝘵𝘪𝘯𝘨 𝘓𝘪ꜱ𝘵 𝘖𝘧 𝘜ꜱ𝘦𝘳ꜱ')
     users = await db.get_all_users()
     out = "Uꜱᴇʀꜱ Sᴀᴠᴇᴅ Iɴ DB Aʀᴇ:\n\n"
     async for user in users:
@@ -276,7 +276,7 @@ async def user_info(client, message):
     chat_photo = from_user.photo
     if chat_photo:
         local_user_photo = await client.download_media(message=chat_photo.big_file_id)
-        buttons = [[InlineKeyboardButton('ᴄʟᴏꜱᴇ ✘', callback_data='close_data')]]
+        buttons = [[InlineKeyboardButton('🔮𝘤𝘭𝘰𝘴𝘦🔮', callback_data='close_data')]]
         await message.reply_photo(
             photo=local_user_photo,
             quote=True,
@@ -287,7 +287,7 @@ async def user_info(client, message):
         )
         os.remove(local_user_photo)
     else:
-        buttons = [[InlineKeyboardButton('ᴄʟᴏꜱᴇ ✘', callback_data='close_data')]]
+        buttons = [[InlineKeyboardButton('🔮𝘤𝘭𝘰𝘴𝘦🔮', callback_data='close_data')]]
         await message.reply_text(
             text=message_out_str,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -308,7 +308,7 @@ async def imdb_search(client, message):
         btn = [[InlineKeyboardButton(f"{movie.get('title')} - {movie.get('year')}", callback_data=f"imdb#{movie.movieID}")] for movie in movies ]
         await k.edit('Hᴇʀᴇ Is Wʜᴀᴛ I Fᴏᴜɴᴅ Oɴ Iᴍᴅʙ', reply_markup=InlineKeyboardMarkup(btn))
     else:
-        await message.reply('Gɪᴠᴇ Mᴇ A Mᴏᴠɪᴇ / Sᴇʀɪᴇs Nᴀᴍᴇ')
+        await message.reply('𝘎𝘪𝘷𝘦 𝘔𝘦 𝘈 𝘔𝘰𝘷𝘪𝘦 ／ 𝘚𝘦𝘳𝘪𝘦𝘴 𝘕𝘢𝘮𝘦')
 
 
 @Client.on_callback_query(filters.regex('^imdb'))
