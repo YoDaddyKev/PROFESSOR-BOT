@@ -64,7 +64,7 @@ class Bot(Client):
     async def stop(self, *args):
         await super().stop()
         me = await self.get_me()
-        logger.info(f"{me.first_name} is_...  ♻️Restarting...")
+        logger.info(f"<i>{me.first_name} is_...  Restarting...</i>")
 
     async def iter_messages(self, chat_id: Union[int, str], limit: int, offset: int = 0) -> Optional[AsyncGenerator["types.Message", None]]:                       
         current = offset
