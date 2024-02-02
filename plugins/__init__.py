@@ -30,9 +30,9 @@ async def ban_reply(bot, message):
 
 @Client.on_message(filters.group & filters.incoming & filters.create(disabled_chat))
 async def grp_bd(bot, message):
-    buttons = [[InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ', url=f'https://t.me/{SUPPORT_CHAT}')]]
+    buttons = [[InlineKeyboardButton('🔮𝘚𝘶𝘱𝘱𝘰𝘳𝘵🔮', url=f'https://t.me/{SUPPORT_CHAT}')]]
     chat = await db.get_chat(message.chat.id)
-    k = await message.reply(text=f"CHAT NOT ALLOWED 🐞\n\nMʏ Aᴅᴍɪɴs Hᴀs Rᴇsᴛʀɪᴄᴛᴇᴅ Mᴇ Fʀᴏᴍ Wᴏʀᴋɪɴɢ Hᴇʀᴇ ! Iғ Yᴏᴜ Wᴀɴᴛ Tᴏ Kɴᴏᴡ Mᴏʀᴇ Aʙᴏᴜᴛ Iᴛ Cᴏɴᴛᴀᴄᴛ Sᴜᴘᴘᴏʀᴛ..\nRᴇᴀꜱᴏɴ : <code>{chat['reason']}</code>.", reply_markup=InlineKeyboardMarkup(buttons))
+    k = await message.reply(text=f"𝘊𝘏𝘈𝘛 𝘕𝘖𝘛 𝘈𝘓𝘓𝘖𝘞𝘌𝘋 \n\n𝘔𝘺 𝘈𝘥𝘮𝘪𝘯𝘴 𝘏𝘢𝘴 𝘙𝘦𝘴𝘵𝘳𝘪𝘤𝘵𝘦𝘥 𝘔𝘦 𝘍𝘳𝘰𝘮 𝘞𝘰𝘳𝘬𝘪𝘯𝘨 𝘏𝘦𝘳𝘦 ! 𝘐𝘧 𝘠𝘰𝘶 𝘞𝘢𝘯𝘵 𝘛𝘰 𝘒𝘯𝘰𝘸 𝘔𝘰𝘳𝘦 𝘈𝘣𝘰𝘶𝘵 𝘐𝘵 𝘊𝘰𝘯𝘵𝘢𝘤𝘵 𝘚𝘶𝘱𝘱𝘰𝘳𝘵..\n𝘙𝘦𝘢𝘴𝘰𝘯 : <code>{chat['reason']}</code>.", reply_markup=InlineKeyboardMarkup(buttons))
     try: await k.pin()
     except: pass
     await bot.leave_chat(message.chat.id)
