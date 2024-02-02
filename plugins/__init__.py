@@ -10,7 +10,7 @@ routes = web.RouteTableDef()
 
 @routes.get("/", allow_head=True)
 async def root_route_handler(request):
-    return web.json_response(text="ᴍᴀᴅᴇ ʙʏ: Mᴋɴ Bᴏᴛs™")
+    return web.json_response(text="𝘌𝘷𝘢 𝘮𝘢𝘳𝘪𝘢 𝘨𝘳𝘰𝘶𝘱")
 
 async def web_server():
     web_app = web.Application(client_max_size=30000000)
@@ -26,7 +26,7 @@ async def disabled_chat(_, client, message: Message):
 @Client.on_message(filters.private & filters.incoming & filters.create(banned_users))
 async def ban_reply(bot, message):
     ban = await db.get_ban_status(message.from_user.id)
-    await message.reply(f"Sᴏʀʀʏ Dᴜᴅᴇ, Yᴏᴜ Aʀᴇ Bᴀɴɴᴇᴅ Tᴏ Usᴇ Mᴇ. \nBᴀɴ Rᴇᴀsᴏɴ: {ban['ban_reason']}")
+    await message.reply(f"𝘚𝘰𝘳𝘳𝘺 𝘋𝘶𝘥𝘦， 𝘠𝘰𝘶 𝘈𝘳𝘦 𝘉𝘢𝘯𝘯𝘦𝘥 𝘛𝘰 𝘜𝘴𝘦 𝘔𝘦. \n𝘉𝘢𝘯 𝘙𝘦𝘢𝘴𝘰𝘯: {ban['ban_reason']}")
 
 @Client.on_message(filters.group & filters.incoming & filters.create(disabled_chat))
 async def grp_bd(bot, message):
