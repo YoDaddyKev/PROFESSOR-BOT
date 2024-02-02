@@ -326,7 +326,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "photo":
         buttons = [[
             InlineKeyboardButton(text="𝘉𝘳𝘪𝘨𝘩𝘵", callback_data="bright"),
-            InlineKeyboardButton(text="𝘔𝘪𝘹𝘦𝘹", callback_data="mix"),
+            InlineKeyboardButton(text="𝘔𝘪𝘹", callback_data="mix"),
             InlineKeyboardButton(text="𝘉 𝘯 𝘞", callback_data="b|w"),
             ],[
             InlineKeyboardButton(text="𝘊𝘪𝘳𝘤𝘭𝘦", callback_data="circle"),
