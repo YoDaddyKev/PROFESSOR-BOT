@@ -74,10 +74,10 @@ async def start(client, message):
             InlineKeyboardButton("🔮𝘚𝘶𝘳𝘷𝘦𝘺𝘪𝘯𝘨🔮", switch_inline_query_current_chat=''), 
             InlineKeyboardButton("🔮𝘌𝘯𝘲𝘶𝘪𝘳𝘦𝘴🔮", url="https://t.me/PY_3_16")
             ],[      
-            InlineKeyboardButton("Hᴇʟᴩ 🕸️", callback_data="help"),
-            InlineKeyboardButton("Aʙᴏᴜᴛ ✨", callback_data="about")
+            InlineKeyboardButton("🔮𝘈𝘴𝘴𝘪𝘴𝘵𝘢𝘯𝘤𝘦🔮", callback_data="help"),
+            InlineKeyboardButton("🔮𝘈𝘣𝘰𝘶𝘵🔮", callback_data="about")
         ]]
-        m = await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ")
+        m = await message.reply_sticker("CAACAgQAAxkBAAELTqhlvg3wsDFGIynD2EVy7f2dhddtfwACoxgAAnSBCFF_eTht1W5b2DQE")
         await asyncio.sleep(2)
         await message.reply_photo(photo=random.choice(PICS), caption=START_MESSAGE.format(user=message.from_user.mention, bot=client.mention), reply_markup=InlineKeyboardMarkup(buttons), parse_mode=enums.ParseMode.HTML)
         return await m.delete()
