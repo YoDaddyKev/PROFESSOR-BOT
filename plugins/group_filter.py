@@ -32,19 +32,19 @@ async def fil_mod(client, message):
       try: 
          args = message.text.split(None, 1)[1].lower() 
       except: 
-         return await message.reply("**𝘊𝘰𝘮𝘮𝘢𝘯𝘥 𝘐𝘯𝘤𝘰𝘮𝘱𝘭𝘦𝘵𝘦**")
+         return await message.reply("**ɪɴᴄᴏᴍᴩʟᴇᴛᴇ ᴄᴏᴍᴍᴀɴᴅ...**")
       
-      m = await message.reply("**𝘚𝘦𝘵𝘵𝘪𝘯𝘨**")
+      m = await message.reply("**ꜱᴇᴛᴛɪɴɢ....**")
 
       if args in mode_on:
           FILTER_MODE[str(message.chat.id)] = "True"
-              await m.edit("**𝘈𝘶𝘵𝘰𝘍𝘪𝘭𝘵𝘦𝘳 𝘈𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥**")
+              await m.edit("**ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ᴇɴᴀʙʟᴇᴅ**")
       
       elif args in mode_of:
           FILTER_MODE[str(message.chat.id)] = "False"
-              await m.edit("**𝘈𝘶𝘵𝘰𝘍𝘪𝘭𝘵𝘦𝘳 𝘜𝘯𝘢𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥**")
+              await m.edit("**ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ᴅɪꜱᴀʙʟᴇᴅ**")
       else:
-          await m.edit("𝘜𝘵𝘪𝘭𝘪𝘻𝘦_/autofilter on` 𝘵𝘰 𝘰𝘮𝘪𝘵 `/autofilter off`")
+          await m.edit("ᴜꜱᴇ :- `/autofilter on` ᴏʀ `/autofilter off`")
 
 
 @Client.on_message(filters.command('g_filter') & filters.group & filters.create(admin_filter))
@@ -55,19 +55,19 @@ async def g_fil_mod(client, message):
       try: 
          args = message.text.split(None, 1)[1].lower() 
       except: 
-         return await message.reply("**𝘊𝘰𝘮𝘮𝘢𝘯𝘥 𝘐𝘯𝘤𝘰𝘮𝘱𝘭𝘦𝘵𝘦**")
+         return await message.reply("**ɪɴᴄᴏᴍᴩʟᴇᴛᴇ ᴄᴏᴍᴍᴀɴᴅ...**")
       
-      m = await message.reply("**𝘚𝘦𝘵𝘵𝘪𝘯𝘨𝘴**")
+      m = await message.reply("**ꜱᴇᴛᴛɪɴɢ...**")
 
       if args in mode_on:
           G_MODE[str(message.chat.id)] = "True"
-          await m.edit("**𝘎𝘭𝘰𝘣𝘢𝘭𝘍𝘪𝘭𝘵𝘦𝘳 𝘢𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥**")
+          await m.edit("**ɢʟᴏʙᴀʟ ꜰɪʟᴛᴇʀ ᴇɴᴀʙʟᴇᴅ**")
       
       elif args in mode_of:
           G_MODE[str(message.chat.id)] = "False"
-          await m.edit("**𝘎𝘭𝘰𝘣𝘢𝘭𝘍𝘪𝘭𝘵𝘦𝘳 𝘜𝘯𝘈𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥**")
+          await m.edit("**ɢʟᴏʙᴀʟ ꜰɪʟᴛᴇʀ ᴅɪꜱᴀʙʟᴇᴅ**")
       else:
-          await m.edit("𝘜𝘵𝘪𝘭𝘪𝘻𝘦_/autofilter on` 𝘵𝘰 𝘰𝘮𝘪𝘵 `/autofilter off`")
+          await m.edit("ᴜꜱᴇ :- `/g_filter on` ᴏʀ `/g_filter off`")
 
 
 @Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("next")))
