@@ -14,7 +14,7 @@ class script(object):
 🔮 <b><i>MySERVER: AnyWHERE</b></i>
 🔮 <b><i>VERSION: V1.0</b></i>"""
    
-    SOURCE_TXT = """🔮<b><i>Source Code:</b></i>🔮
+    SOURCE_TXT = """🔮<b><i>Source Code</b></i>🔮
 <b><i>Limited ownership of components. Not available for public release.</b></i>
 
 <b><i>For Enquires: @k_ASTRA1</b></i>"""
