@@ -116,20 +116,20 @@ async def next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("◀️ 𝖡𝖺𝖼𝗄", callback_data=f"next_{req}_{key}_{off_set}"),
-             InlineKeyboardButton(f"📃 Pages {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}",
+            [InlineKeyboardButton("⬅️ 𝘉𝘢𝘤𝘬", callback_data=f"next_{req}_{key}_{off_set}"),
+             InlineKeyboardButton(f"🔮 𝘗𝘢𝘨𝘦𝘴 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}",
                                   callback_data="pages")]
         )
     elif off_set is None:
         btn.append(
-            [InlineKeyboardButton(f"🗓 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("𝖭𝖾𝗑𝗍 ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
+            [InlineKeyboardButton(f"🔮 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
+             InlineKeyboardButton("𝘕𝘦𝘹𝘵 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
-                InlineKeyboardButton("◀️ 𝖡𝖺𝖼𝗄", callback_data=f"next_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"🗓 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-                InlineKeyboardButton("𝖭𝖾𝗑𝗍 ▶️", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("⬅️ 𝘉𝘢𝘤𝘬", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton(f"🔮 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
+                InlineKeyboardButton("𝘕𝘦𝘹𝘵 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     
@@ -231,12 +231,12 @@ async def auto_filter(client, msg, spoll=False):
         temp.BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton(text=f"📄 𝖯𝖠𝖦𝖤 1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
-             InlineKeyboardButton(text="𝖭𝖤𝖷𝖳 ▶️", callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton(text=f"🔮 𝘗𝘢𝘨𝘦 1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
+             InlineKeyboardButton(text="𝘕𝘦𝘹𝘵 ➡️", callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="📄 𝖯𝖠𝖦𝖤 1/1", callback_data="pages")]
+            [InlineKeyboardButton(text="🔮 𝘗𝘢𝘨𝘦 1/1", callback_data="pages")]
         )
     
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
@@ -311,7 +311,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("𝘏𝘔𝘔 𝘊𝘢𝘯𝘵 𝘧𝘪𝘯𝘥 𝘪𝘵. 𝘈𝘴𝘬 𝘈𝘥𝘮𝘪𝘯𝘴")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -340,7 +340,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply_photo(photo="https://telegra.ph/file/995e382f36f89e8efb93a.jpg", caption="<i><b>I couldn't find anything related to that. Check your spelling</i></b>")
+        k = await msg.reply_photo(photo="https://telegra.ph/file/9dff14b0f8b1a61b6157b.jpg", caption="<i><b>🦇I couldn't find anything related to that. Check your spelling</i></b>")
         await asyncio.sleep(8)
         await k.delete()
         return
