@@ -267,7 +267,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Hᴇʀᴇ Is Wʜᴀᴛ I Fᴏᴜɴᴅ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}"
+        cap = f"𝘏𝘦𝘳𝘦 𝘐𝘴 𝘞𝘩𝘢𝘵 𝘐 𝘍𝘰𝘶𝘯𝘥 {search}"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
@@ -329,9 +329,13 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("𝘐 𝘊𝘰𝘶𝘭𝘥𝘯𝘵 𝘍𝘪𝘯𝘥 𝘈𝘯𝘺𝘵𝘩𝘪𝘯𝘨 𝘙𝘦𝘭𝘢𝘵𝘦𝘥 𝘛𝘰 𝘛𝘩𝘢𝘵． 𝘊𝘩𝘦𝘤𝘬 𝘠𝘰𝘶𝘳 𝘚𝘱𝘦𝘭𝘭𝘪𝘯𝘨")
-        await asyncio.sleep(8)
-        return await k.delete()
+        k = await msg.reply_photo(
+    photo="https://telegra.ph/file/48e7c5dfc7696de35bda7.jpg",
+    caption="<i><b>I couldn't find anything related to that. Check your spelling</i></b>"
+)
+await asyncio.sleep(8)
+await k.delete()
+return
     temp.GP_SPELL[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"spolling#{user}#{k}",)] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
