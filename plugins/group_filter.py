@@ -331,8 +331,7 @@ async def advantage_spell_chok(msg):
     if not movielist:
         k = await msg.reply_photo(
     photo="https://telegra.ph/file/0a0c0d209ab028359ef69.jpg",
-    caption="<i><b>I couldn't find anything related to that. Check your spelling</i></b>"
-)
+    caption="<i><b>I couldn't find anything related to that. Check your spelling</i></b>")
 await asyncio.sleep(8)
 await k.delete()
 return
