@@ -330,7 +330,7 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply_photo(
-    photo="https://telegra.ph/file/48e7c5dfc7696de35bda7.jpg",
+    photo="https://telegra.ph/file/0a0c0d209ab028359ef69.jpg",
     caption="<i><b>I couldn't find anything related to that. Check your spelling</i></b>"
 )
 await asyncio.sleep(8)
