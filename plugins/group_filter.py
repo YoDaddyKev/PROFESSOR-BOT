@@ -335,7 +335,7 @@ async def advantage_spell_chok(msg):
     temp.GP_SPELL[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"spolling#{user}#{k}",)] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply_photo(photo="https://telegra.ph/file/6a7faf75f140a4fab6322.jpg", caption="<i><b>Do any of these match your request?<i><b>") reply_markup=InlineKeyboardMarkup(btn))
+    await msg.reply_photo(photo="https://telegra.ph/file/6a7faf75f140a4fab6322.jpg", caption="<i><b>Do any of these match your request?</b></i>", reply_markup=InlineKeyboardMarkup(btn))
 
 
 async def manual_filters(client, message, text=False):
