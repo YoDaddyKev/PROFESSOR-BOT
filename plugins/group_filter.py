@@ -141,7 +141,7 @@ async def advantage_spoll_choker(bot, query):
         return await query.message.delete()
     movies = temp.GP_SPELL.get(query.message.reply_to_message.id)
     if not movies:
-        return await query.answer("Yᴏᴜ Aʀᴇ Usɪɴɢ Oɴᴇ Oғ Mʏ Oʟᴅ Mᴇssᴀɢᴇs, Pʟᴇᴀsᴇ Sᴇɴᴅ Tʜᴇ Rᴇǫᴜᴇsᴛ Aɢᴀɪɴ", show_alert=True)
+        return await query.answer("𝘛𝘩𝘢𝘵𝘴 𝘰𝘯𝘦 𝘰𝘧 𝘮𝘺 𝘰𝘭𝘥 𝘔𝘦𝘴𝘴𝘢𝘨𝘦𝘴, 𝘙𝘦𝘲𝘶𝘦𝘴𝘵 𝘢𝘨𝘢𝘪𝘯", show_alert=True)
     movie = movies[(int(movie_))]
     await query.answer('Checking for Movie in database...')
     k = await manual_filters(bot, query.message, text=movie)
@@ -151,7 +151,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
+            k = await query.message.edit('𝘐 𝘊𝘢𝘯，𝘵 𝘧𝘪𝘯𝘥 𝘪𝘵， 𝘢𝘴𝘬 𝘵𝘩𝘦 𝘢𝘥𝘮𝘪𝘯𝘴')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -304,7 +304,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏ Mᴏᴠɪᴇ Iɴ Tʜᴀᴛ Nᴀᴍᴇ")
+        k = await msg.reply("𝘊𝘩𝘦𝘤𝘬 𝘠𝘰𝘶𝘳 𝘚𝘱𝘦𝘭𝘭𝘪𝘪𝘯𝘨")
         await asyncio.sleep(8)
         return await k.delete()
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
